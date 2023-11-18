@@ -34,7 +34,7 @@ const TodoPage: FC = async () => {
   const doneCount = todos.filter(x => x.done).length;
 
   return (
-    <div className="w-[400px] mx-auto">
+    <div className="w-[400px] max-w-[calc(100%-1rem)] mx-auto">
       <div className="text-center text-sm text-green-600 py-2">
         {doneCount} out of {totalCount} todos completed
       </div>
@@ -43,7 +43,7 @@ const TodoPage: FC = async () => {
           key={performance.now()}
           type="text"
           name="title"
-          className="py-1 px-2 text-gray-600 border border-gray-300 flex-1 outline-none focus:border-green-600"
+          className="py-1 px-2 text-gray-600 border border-gray-300 flex-1 outline-none focus:border-green-600 min-w-0"
           placeholder="what do you need to do?"
         />
         <button
